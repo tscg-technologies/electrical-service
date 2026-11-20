@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#101D2B"/>
+      <stop offset="50%" stop-color="#142334"/>
+      <stop offset="100%" stop-color="#171F29"/>
+    </linearGradient>
+    <linearGradient id="cyan-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2377D4" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#35C9E6" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#2377D4" stop-opacity="0.8"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#2377D4" stroke-width="0.75" stroke-opacity="0.18"/>
+      <circle cx="40" cy="0" r="1.5" fill="#35C9E6" fill-opacity="0.25"/>
+    </pattern>
+    <pattern id="subgrid" width="160" height="160" patternUnits="userSpaceOnUse">
+      <rect width="160" height="160" fill="none" stroke="#35C9E6" stroke-width="1.2" stroke-opacity="0.2"/>
+      <line x1="80" y1="0" x2="80" y2="160" stroke="#2377D4" stroke-width="0.7" stroke-dasharray="4,4" stroke-opacity="0.15"/>
+      <line x1="0" y1="80" x2="160" y2="80" stroke="#2377D4" stroke-width="0.7" stroke-dasharray="4,4" stroke-opacity="0.15"/>
+    </pattern>
+  </defs>
+
+  <!-- Base Background -->
+  <rect width="1200" height="900" fill="url(#bg-grad)"/>
+
+  <!-- Circuit Schematic Grids -->
+  <rect width="1200" height="900" fill="url(#grid)"/>
+  <rect width="1200" height="900" fill="url(#subgrid)"/>
+
+  <!-- Tech Accent Lines and Nodes -->
+  <g opacity="0.35">
+    <path d="M 0,180 L 420,180 L 540,270 L 1200,270" fill="none" stroke="#35C9E6" stroke-width="2" stroke-dasharray="8,6"/>
+    <circle cx="420" cy="180" r="4" fill="#35C9E6"/>
+    <circle cx="540" cy="270" r="4" fill="#FF9B42"/>
+
+    <path d="M 96,900 L 96,675 L 300,540 L 1020,540 L 1200,675" fill="none" stroke="#2377D4" stroke-width="2"/>
+    <circle cx="96" cy="675" r="4" fill="#2377D4"/>
+    <circle cx="300" cy="540" r="4" fill="#35C9E6"/>
+    <circle cx="1020" cy="540" r="4" fill="#FF9B42"/>
+  </g>
+
+  <!-- Corner Brackets -->
+  <g stroke="#35C9E6" stroke-width="2" fill="none" opacity="0.6">
+    <path d="M 30,60 L 30,30 L 60,30"/>
+    <path d="M 1170,60 L 1170,30 L 1140,30"/>
+    <path d="M 30,840 L 30,870 L 60,870"/>
+    <path d="M 1170,840 L 1170,870 L 1140,870"/>
+  </g>
+
+  <!-- Top Status Bar -->
+  <rect x="35" y="35" width="280" height="28" rx="4" fill="#171F29" fill-opacity="0.85" stroke="#2377D4" stroke-width="1"/>
+  <circle cx="50" cy="49" r="4" fill="#35C9E6"/>
+  <text x="64" y="53" fill="#E9EEF3" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, monospace" font-size="11" font-weight="600" letter-spacing="1.5">IMAGE PLACEHOLDER • 4:3</text>
+
+  <rect x="960" y="35" width="205" height="28" rx="4" fill="#171F29" fill-opacity="0.85" stroke="#35C9E6" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="972" y="53" fill="#35C9E6" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, monospace" font-size="11" font-weight="700" letter-spacing="1">TSCG DEMO SPEC</text>
+
+  <!-- Center Card Frame -->
+  <g transform="translate(260, 320)">
+    <rect width="680" height="260" rx="12" fill="#171F29" fill-opacity="0.92" stroke="#35C9E6" stroke-width="1.5"/>
+    <rect x="0" y="0" width="680" height="4" rx="2" fill="url(#cyan-glow)"/>
+
+    <!-- Category Pill -->
+    <rect x="40" y="30" width="600" height="26" rx="4" fill="#101D2B" stroke="#2377D4" stroke-width="1"/>
+    <text x="340" y="47" text-anchor="middle" fill="#35C9E6" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, monospace" font-size="11" font-weight="700" letter-spacing="2">LIGHTING DESIGN • PHOTOMETRICS & CONTROLS</text>
+
+    <!-- Center Icon -->
+    <g transform="translate(60, 75) scale(0.9)">
+      <circle cx="50" cy="50" r="44" fill="#101D2B" stroke="#2377D4" stroke-width="2"/>
+      <path d="M50,20 C36,20 28,31 28,42 C28,51 34,57 37,64 L42,74 H58 L63,64 C66,57 72,51 72,42 C72,31 64,20 50,20 Z" fill="none" stroke="#35C9E6" stroke-width="4"/><line x1="42" y1="80" x2="58" y2="80" stroke="#FF9B42" stroke-width="3"/><line x1="45" y1="86" x2="55" y2="86" stroke="#FF9B42" stroke-width="3"/>
+    </g>
+
+    <!-- Main Title & Filename -->
+    <text x="175" y="115" fill="#F7F9FC" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="22" font-weight="700" letter-spacing="0.5">Architectural & Industrial LED Luminaire Systems</text>
+    <text x="175" y="145" fill="#E9EEF3" font-family="ui-monospace, SF Mono, Menlo, Consolas, monospace" font-size="14" font-weight="600" opacity="0.85">Target: electrical-lighting-installation.jpg</text>
+    <text x="175" y="172" fill="#FF9B42" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="13" font-weight="500">Photorealistic replacement ready via Google Flow guide</text>
+  </g>
+
+  <!-- Bottom Technical Legend -->
+  <g transform="translate(45, 855)">
+    <text x="0" y="0" fill="#35C9E6" font-family="ui-monospace, SF Mono, Menlo, Consolas, monospace" font-size="11" opacity="0.7">STATUS: READY FOR PRODUCTION ASSETS // ASPECT: 4:3 // ELECTRICAL SERVICES DEMO</text>
+  </g>
+</svg>
